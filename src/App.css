@@ -4,9 +4,16 @@
     box-sizing: border-box;
 }
 
+:root{
+    --first-color: #e60023;
+    --second-color: #e1e1e1;
+    --third-color: #000000;
+    --forth-color: #ffc41f;
+    --main-font: 'Dancing Script', cursive;
+}
+
 .footer{
     bottom: 0;
-    position: absolute;
     width: 100%;
 }
 
@@ -25,4 +32,55 @@
     font-size: 20pt;
     font-weight: 700;
     color: #fff;
+}
+
+.bk{
+    filter: opacity(70%);
+}
+
+.meal h1{
+    text-align: center;
+}
+
+.form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.app__input{
+    background-color: var(--second-color);
+    color: var(--third-color);
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--main-font);
+    border: none;
+}
+
+.app__input:hover{
+    outline: none;
+    background-color: var(--forth-color);
+    color: #000000;
+    border: none;
+}
+
+.form button{
+    background-color: var(--forth-color);
+    color: var(--third-color);
+    font-weight: bold;
+    border: none;
+}
+
+.form button:hover{
+    background-color: var(--third-color);
+    color: #ffc41f;
+}
+
+.app__recipes{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
 }
