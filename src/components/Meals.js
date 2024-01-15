@@ -24,9 +24,9 @@ const Meals = () => {
       const result = await Axios.get(url);
       setRecipes(result.data.hits);
       setError(null)
-    } catch (err) {
-      console.log('Error fetching data:', err);
+    } catch (err) {      
       setError(err.message);
+      throw Error('Error fetching data:', err);
     } finally {
       setLoading(false);
     }
