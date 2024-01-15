@@ -1,4 +1,4 @@
-# Foodie App Readme
+# Foodie App 
 
 ## Welcome to Foodie!
 
