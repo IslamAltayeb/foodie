@@ -19,10 +19,9 @@ const NavSBar = () => {
             navbarScroll
           >
             <Nav.Link href="/" className='links'>Home</Nav.Link>
-            <Nav.Link href="/about" className='links'>About</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Favorite</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Review</NavDropdown.Item>
+              <NavDropdown.Item href="/review">Review</NavDropdown.Item>
+              <NavDropdown.Item href="/about">About</NavDropdown.Item>
             </NavDropdown>       
           </Nav>
           <Nav.Link as={Link} to='/cart' className='cart'>Cart <FaCartShopping /></Nav.Link>
