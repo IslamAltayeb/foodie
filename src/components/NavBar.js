@@ -1,15 +1,16 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { FaCartShopping } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+
 
 const NavSBar = () => {
   return (
     <Navbar expand="lg" style={{'backgroundColor' : '#e60023'}}>
       <Container fluid>
-        <Navbar.Brand href="/home" className='logo'>Foodie</Navbar.Brand>
+        <Navbar.Brand href="/" className='logo'>Foodie</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -17,24 +18,14 @@ const NavSBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
+            <Nav.Link href="/" className='links'>Home</Nav.Link>
+            <Nav.Link href="/about" className='links'>About</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Favorite</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Review
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Review</NavDropdown.Item>
             </NavDropdown>       
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          <Nav.Link as={Link} to='/cart' className='cart'>Cart <FaCartShopping /></Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

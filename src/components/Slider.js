@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import first from '../assets/first.jpg'
 import second from '../assets/second.webp'
 import third from '../assets/third.png'
+import Meals from './Meals';
 
 function Slider() {
   const [index, setIndex] = useState(0);
@@ -12,6 +13,7 @@ function Slider() {
   };
 
   return (
+    <>
     <Carousel className='slider' activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
        <img src={first} alt="" />
@@ -35,6 +37,9 @@ function Slider() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+
+    <Meals />
+    </>
   );
 }
 

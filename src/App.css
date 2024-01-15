@@ -84,3 +84,36 @@
     margin: 0 auto;
     margin-top: 50px;
 }
+
+.links{
+    color: var(--second-color);
+    font-weight: bold;
+}
+
+#navbarScrollingDropdown{
+    color: var(--second-color);
+    font-weight: bold;
+}
+
+#navbarScrollingDropdown:hover{
+    color: var(--third-color);
+}
+
+.card button{
+    background-color: var(--first-color);
+    color: var(--second-color);
+    font-weight: bold;
+    border: none;
+    margin-right: 100px;
+}
+
+.card button:hover{
+    background-color: var(--forth-color);
+}
+
+.cart{
+    color: #fff;
+    font-weight: bolder;
+    margin-right: 25px;
+}
+
