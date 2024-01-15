@@ -22,9 +22,27 @@
     margin-bottom: 40px;
 }
 
+
+@media (max-width: 767px) {
+    .slider {
+        height: 600px;
+    }
+}
+
+.carousel-indicators{
+    display: none;
+    position:relative;
+}
+
 .slider img{
     height: 90vh;
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    .slider img{
+        height: 400px;
+    }
 }
 
 .logo{
@@ -45,6 +63,12 @@
 .form{
     width: 50%;
     margin: 0 auto;
+}
+
+@media (max-width: 767px){
+    .meal{
+        margin-top: -100px;
+    }
 }
 
 .app__input{
@@ -149,4 +173,41 @@
 .about .about-text{
     width: 50%;
     margin-top: 30px;
+}
+
+.review-container{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px){
+    .review-container{
+        flex-flow: column;        
+    }
+}
+
+.review-container form{
+    width: 60%;
+    margin-top: 100px;
+}
+
+.review-container img{
+    width: 90%;
+    margin-top: 80px;
+}
+
+.review-card{  
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: var(--third-color);
+    background-color: var(--forth-color);
+    text-align: center;
+    padding: 10px;
+}
+
+.text-error{
+    color: var(--first-color);
+    text-align: center;
 }

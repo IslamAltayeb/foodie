@@ -1,10 +1,16 @@
 import React from 'react'
 import about from '../assets/about.jpg'
+import Fade from 'react-reveal/Fade';
+
 
 const About = () => {
   return (
     <div className='about d-flex'>
+       <Fade left>
         <img src={about} alt="" />
+        </Fade>
+
+        <Fade right>
         <div className="about-text">
           <h2>About</h2>
           <p>          
@@ -13,6 +19,7 @@ const About = () => {
             Located in the Rosewood Hotel Georgia, the dining room is a Vancouver landmark that is steeped in history, reimagined by Studio Munge to deliver three distinct rooms including the cocktail bar and lounge, the elegant pearl room, and the art room.
           </p>
         </div>
+        </Fade>
     </div>
   )
 }
