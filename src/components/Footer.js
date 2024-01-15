@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
 <footer className="text-center text-lg-start footer">
   <div className="text-center p-3 text-light" style={{"backgroundColor": "#e60023"}}>
-    <p>© 2020 Copyright: <a className="text-light" href="https://github.com/IslamAltayeb"> Islam Osman</a></p> 
+    <p>© 2024 Copyright: <a className="text-light" href="https://github.com/IslamAltayeb" target='_blank' rel="noreferrer"> Islam Osman</a></p> 
   </div>
 </footer>
     </div>

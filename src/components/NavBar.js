@@ -19,7 +19,7 @@ const NavSBar = () => {
             navbarScroll
           >
             <Nav.Link href="/" className='links'>Home</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
+            <NavDropdown title="More" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/review">Review</NavDropdown.Item>
               <NavDropdown.Item href="/about">About</NavDropdown.Item>
             </NavDropdown>       

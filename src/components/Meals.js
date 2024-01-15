@@ -23,7 +23,6 @@ const Meals = () => {
     try {
       const result = await Axios.get(url);
       setRecipes(result.data.hits);
-      console.log(result.data.hits);
       setError(null)
     } catch (err) {
       console.log('Error fetching data:', err);
@@ -52,11 +51,8 @@ const Meals = () => {
         />
         <Button variant="outline-success" type="submit" value="Search" >Search</Button>
       </Form>
-{/* 
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>} */}
 
-      
+
       {loading ? (<h3>Loading...</h3>):      
       error ? (
         <p>Error: {error}</p>
@@ -78,7 +74,7 @@ const Meals = () => {
                   />
                   <Card.Title className="recipeTile__name"> {recipe.recipe.label}</Card.Title>
                   <Button  onClick={() => addToCart(recipe)}>Add To Cart</Button>
-
+                  <strong>yield: {recipe.recipe.yield}</strong>
                   </Card.Body>
                 </Card>
               );

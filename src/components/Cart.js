@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useCart } from './CartContext';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { CiHeart } from 'react-icons/ci';
 
 
 const Cart = () => {
@@ -49,7 +48,6 @@ const Cart = () => {
                 />
                 <Card.Title className='recipeTile__name'>{item.recipe.label}</Card.Title>
                 <Button onClick={() => handleRemoveFromCart(index)}>Remove from Cart</Button>{' '}
-                <CiHeart />
               </Card.Body>
             </Card>
           ))}
