@@ -4,9 +4,16 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { CiHeart } from 'react-icons/ci';
 
+
 const Cart = () => {
   const { items, loading, error, removeItemFromCart } = useCart();
   const [isCartEmpty, setIsCartEmpty] = useState(false);
+
+  const handleClick = () => {
+    const phoneNumber = '310687662118'; 
+    const message = 'Hello islam!, i want to buy this item'; 
+    window.location.href = `whatsapp://send?phone=${phoneNumber}&text=${message}`;
+  };
 
   useEffect(() => {
     setIsCartEmpty(items.length === 0);
@@ -17,7 +24,7 @@ const Cart = () => {
   }
 
   if (error) {
-    return <p>Error loading cart: {error.message}</p>;
+    return <p>Error loading cart: {'Oops, something went wrong!'}</p>;
   }
 
   const handleRemoveFromCart = (index) => {
@@ -30,7 +37,7 @@ const Cart = () => {
       {isCartEmpty ? (
         <p>There are no items in your cart.</p>
       ) : (
-        <ul>
+        <ul className='d-flex'>
           {items.map((item, index) => (
             <Card className='m-2' style={{ width: '20rem' }} key={index}>
               <Card.Body>
@@ -46,8 +53,16 @@ const Cart = () => {
               </Card.Body>
             </Card>
           ))}
+
+            <div className="whats-app contact-col">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h3>purchase your items</h3>
+              <button title='message me' onClick={handleClick}>Send a message</button>
+            </div>
         </ul>
       )}
+
+            
     </div>
   );
 };
