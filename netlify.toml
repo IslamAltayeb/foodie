@@ -1,8 +1,5 @@
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status =200
-
-from = "/*"
-to = "/cart.html"
-status = 200
+/*        /index.html   200
+/*       /cart.html   200
+/*      /review.html   200
+/*     /home.html   200
