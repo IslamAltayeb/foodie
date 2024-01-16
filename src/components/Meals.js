@@ -11,7 +11,7 @@ const Meals = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const { addToCart} = useCart();
+  const { addToCart } = useCart();
 
   const MY_APP_ID = '1282ad62';
   const MY_APP_KEY = '77115bfdd999df858e240c31764f92e8';
@@ -19,11 +19,11 @@ const Meals = () => {
   const url = `https://api.edamam.com/search?q=${query}&app_id=${MY_APP_ID}&app_key=${MY_APP_KEY}`;
 
   const getRecipeInfo = async () => {
-    setLoading(true); 
+    setLoading(true);
     try {
       const result = await Axios.get(url);
       setRecipes(result.data.hits);
-      setError(null)
+      setError(null);
     } catch (err) {
       console.log('Error fetching data:', err);
       setError(err.message);
@@ -32,9 +32,17 @@ const Meals = () => {
     }
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    getRecipeInfo();
+    await getRecipeInfo();
+    setQuery('');
+  };
+
+  const [addedToCart, setAddedToCart] = useState({});
+
+  const handleAddToCart = (recipe) => {
+    addToCart(recipe);
+    setAddedToCart((prev) => ({ ...prev, [recipe.recipe.label]: true }));
   };
 
   return (
@@ -49,40 +57,47 @@ const Meals = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <Button variant="outline-success" type="submit" value="Search" >Search</Button>
+        <Button variant="outline-success" type="submit" value="Search">
+          Search
+        </Button>
       </Form>
 
-
-      {loading ? (<h3>Loading...</h3>):      
-      error ? (
+      {loading ? (
+        <h3>Loading...</h3>
+      ) : error ? (
         <p>Error: {error}</p>
-      ) :      
-      <div className="app__recipes">
-        {recipes.length > 0 &&
-          recipes.map((recipe) => {
-            if (recipe.recipe) {
-              return (
-                
-                <Card className='m-2' style={{ width: '20rem' }}
-                  key={uuidv4()}
-                >
+      ) : (
+        <div className="app__recipes">
+          {recipes.length > 0 &&
+            recipes.map((recipe) => {
+              if (recipe.recipe) {
+                const isAdded = addedToCart[recipe.recipe.label];
+
+                return (
+                  <Card className='m-2' style={{ width: '20rem' }} key={uuidv4()}>
                     <Card.Body card>
-                  <Card.Img variant="top"
-                    className="recipeTile__img"
-                    src={recipe.recipe.image}
-                    alt=""
-                  />
-                  <Card.Title className="recipeTile__name"> {recipe.recipe.label}</Card.Title>
-                  <Button  onClick={() => addToCart(recipe)}>Add To Cart</Button>
-                  <strong>yield: {recipe.recipe.yield}</strong>
-                  </Card.Body>
-                </Card>
-              );
-            }
-            return null;
-          })}
-      </div>}
-      
+                      <Card.Img
+                        variant="top"
+                        className="recipeTile__img"
+                        src={recipe.recipe.image}
+                        alt=""
+                      />
+                      <Card.Title className="recipeTile__name">{recipe.recipe.label}</Card.Title>
+                      <Button
+                        onClick={() => handleAddToCart(recipe)}
+                        disabled={isAdded}
+                      >
+                        {isAdded ? 'Added' : 'Add To Cart'}
+                      </Button>
+                      <strong>yield: {recipe.recipe.yield}</strong>
+                    </Card.Body>
+                  </Card>
+                );
+              }
+              return null;
+            })}
+        </div>
+      )}
     </div>
   );
 };

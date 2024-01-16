@@ -23,8 +23,8 @@ function Slider() {
        <img src={top} alt="" />
          <Carousel.Caption className='bk' style={{'color' : '#000000', 'backgroundColor' : '#ffc41f'}}>
 
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Welcome to Foodie App</h3>
+          <p>Search for your favorite meals</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -33,16 +33,16 @@ function Slider() {
 
         <Carousel.Caption className='bk' style={{'color' : '#000000', 'backgroundColor' : '#ffc41f'}}>
 
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Add your meal to the cart</h3>
+          <p>Buy you meal easy by sending message on whatsapp!</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
 
         <img src={beef} alt="" />
         <Carousel.Caption className='bk' style={{'color' : '#000000', 'backgroundColor' : '#ffc41f'}}>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h3>Add your review!</h3>
+          <p>We glad to get your feedback about the app.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

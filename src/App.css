@@ -233,6 +233,10 @@
     padding: 10px;
 }
 
+.review-card h4{
+    color: var(--first-color);
+}
+
 .text-error{
     color: var(--first-color);
     text-align: center;
