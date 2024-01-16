@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.62758e1c.css",
-    "main.js": "/static/js/main.11e1d7d1.js",
-    "static/media/beef.jpg": "/static/media/beef.4277405aa406bf9dba25.jpg",
-    "static/media/third.png": "/static/media/third.bdbe94250989739b0baa.png",
-    "static/media/fast-food.png": "/static/media/fast-food.829dbdbd96fd2427adef.png",
-    "static/media/top.webp": "/static/media/top.dfa51e2d9636aa9bae44.webp",
-    "static/media/about.jpg": "/static/media/about.8fb3162492ef7fd9165b.jpg",
-    "index.html": "/index.html",
-    "main.62758e1c.css.map": "/static/css/main.62758e1c.css.map",
-    "main.11e1d7d1.js.map": "/static/js/main.11e1d7d1.js.map"
+    "main.css": "/foodie/static/css/main.62758e1c.css",
+    "main.js": "/foodie/static/js/main.95d369d9.js",
+    "static/media/beef.jpg": "/foodie/static/media/beef.4277405aa406bf9dba25.jpg",
+    "static/media/third.png": "/foodie/static/media/third.bdbe94250989739b0baa.png",
+    "static/media/fast-food.png": "/foodie/static/media/fast-food.829dbdbd96fd2427adef.png",
+    "static/media/top.webp": "/foodie/static/media/top.dfa51e2d9636aa9bae44.webp",
+    "static/media/about.jpg": "/foodie/static/media/about.8fb3162492ef7fd9165b.jpg",
+    "index.html": "/foodie/index.html",
+    "main.62758e1c.css.map": "/foodie/static/css/main.62758e1c.css.map",
+    "main.95d369d9.js.map": "/foodie/static/js/main.95d369d9.js.map"
   },
   "entrypoints": [
     "static/css/main.62758e1c.css",
-    "static/js/main.11e1d7d1.js"
+    "static/js/main.95d369d9.js"
   ]
 }
