@@ -163,11 +163,37 @@
     height: 80vh;
     margin: 0 auto;
 }
+
 .about img{
     width: 40%;
     margin-left: 10px;
     margin-right: 25px;
     border-radius: 10px;
+}
+
+
+@media (max-width: 767px){
+    .about{
+        flex-flow: wrap row;
+        justify-content: space-between;
+        height: 700px;
+    }
+
+    .about .about-text p{
+        text-align: center;
+        width: 350px;
+        margin: 10px;
+    }
+
+    .about .about-text h2{
+        text-align: center;
+        margin-left: 150px;        
+    }
+
+    .about img{
+        width: 350px;
+        margin-top: 10px;
+    }
 }
 
 .about .about-text{
@@ -202,7 +228,7 @@
     margin: 0 auto;
     margin-bottom: 20px;
     color: var(--third-color);
-    background-color: var(--forth-color);
+    background-color: var(--second-color);
     text-align: center;
     padding: 10px;
 }

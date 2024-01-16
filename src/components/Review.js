@@ -74,11 +74,13 @@ const Review = () => {
               value={formData.review}
               onChange={handleChange}
             />
-            <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStar />
+            <FaStar style={{'color' : '#ffc41f', 'fontSize' : '20pt', 'marginTop': '5px'}}/>
+            <FaStar style={{'color' : '#ffc41f', 'fontSize' : '20pt', 'marginTop': '5px'}}/>
+            <FaStar style={{'color' : '#ffc41f', 'fontSize' : '20pt', 'marginTop': '5px'}}/>
+            <FaStar style={{'color' : '#ffc41f', 'fontSize' : '20pt', 'marginTop': '5px'}}/>
+            <FaStar style={{'color' : '#ffc41f', 'fontSize' : '20pt', 'marginTop': '5px'}}/>
           </Form.Group>
-          <Button variant="warning" onClick={handleSubmit}>
-            Submit
-          </Button>{' '}
+          <Button variant="warning" onClick={handleSubmit}>Submit</Button>{' '}
           {error && <h4 className="text-error mt-2">{error}</h4>}
         </Form>        
       </div>    

@@ -46,17 +46,16 @@ const Cart = () => {
                   src={item.recipe.image}
                   alt=''
                 />
-                <Card.Title className='recipeTile__name'>{item.recipe.label}</Card.Title>
+                <Card.Title className='recipeTile__name'>{item.recipe.label}</Card.Title>                
                 <Button onClick={() => handleRemoveFromCart(index)}>Remove from Cart</Button>{' '}
               </Card.Body>
-            </Card>
+            </Card>            
           ))}
 
             <div className="whats-app contact-col">
-              <i class="fa-brands fa-whatsapp"></i>
               <h3>purchase your items</h3>
-              <button title='message me' onClick={handleClick}>Send a message</button>
-            </div>
+              <button title='message me' onClick={handleClick}>Send a message</button>              
+            </div>           
         </ul>
       )}
 
